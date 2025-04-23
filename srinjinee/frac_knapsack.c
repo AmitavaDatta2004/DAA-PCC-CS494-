@@ -31,7 +31,7 @@ double fractional_knapsack(int weight[],int profit[],double ratio[],int n,double
     double remaining_capacity = c;
     double MaxProfit = 0.0;
     for(int i=0;i<n;i++){
-        if(remaining_capacity<=weight[i]){
+        if(remaining_capacity>=weight[i]){
             printf("\n taking the whole item---\n");
             MaxProfit += profit[i];
             remaining_capacity -= weight[i];

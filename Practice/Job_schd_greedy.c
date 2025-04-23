@@ -33,11 +33,11 @@ int maxDeadline(int deadline[],int n){
 
 int jobSequencing(int profit[],int deadline[],int jobNo[],int n){
     sortJobs(profit,deadline,jobNo,n);
-    int maximum=maxDeadline(deadline,n);
+    int max=maxDeadline(deadline,n);
     
-    int slot[maximum];
+    int slot[max];
     int i,j;
-    for(i=0;i<n;i++){
+    for(i=0;i<max;i++){
         slot[i]=-1;
     }
 
@@ -55,7 +55,7 @@ int jobSequencing(int profit[],int deadline[],int jobNo[],int n){
         }
     }
 
-    for(i=0;i<maximum;i++){
+    for(i=0;i<max;i++){
         printf("Job-%d\n",slot[i]);
     }
     return maxProfit;
@@ -71,7 +71,7 @@ int main(){
     int jobNo[n];
     int i;
     for(i=0;i<n;i++){
-        printf("Enter the profit and deadline of job %d",i+1);
+        printf("Enter the profit and deadline of job %d :",i+1);
         scanf("%d%d",&profit[i],&deadline[i]);
         jobNo[i]=i+1;
     }

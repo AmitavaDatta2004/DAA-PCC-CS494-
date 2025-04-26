@@ -58,6 +58,7 @@ int main(){
     for(int i=0;i<V;i++){
         dist[i] = INF;
     }
+    dist[src]=0;
 
     bellmanFord(dist,V,src);
     return 0;

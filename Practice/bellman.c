@@ -21,7 +21,7 @@ void belmanford(int src,int V,int dist[]){
     for(i=0;i<V-1;i++){
         for(u=0;u<V;u++){
             for(v=0;v<V;v++){
-                if( dist[i]!=INF && graph[u][v]!=0 && dist[u] +graph[u][v]<dist[v]){
+                if( dist[u]!=INF && graph[u][v]!=0 && dist[u] +graph[u][v]<dist[v]){
                     dist[v]=dist[u]+graph[u][v];
                 }
             }
@@ -29,8 +29,8 @@ void belmanford(int src,int V,int dist[]){
     }
     for(u=0;u<V;u++){
         for(v=0;v<V;v++){
-            if( dist[i]!=INF && graph[u][v]!=0 && dist[u] +graph[u][v]<dist[v]){
-                dist[v]=dist[u]+graph[u][v];
+            if( dist[u]!=INF && graph[u][v]!=0 && dist[u] +graph[u][v]<dist[v]){
+                // dist[v]=dist[u]+graph[u][v];
             }
         }
     }
